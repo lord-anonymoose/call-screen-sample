@@ -6,30 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8EFD54492CDD4E1A001FA09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */; };
+		8EFD544A2CDD4E1A001FA09A /* ButtonCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543E2CDD4E1A001FA09A /* ButtonCallViewController.swift */; };
+		8EFD544B2CDD4E1A001FA09A /* CallKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543F2CDD4E1A001FA09A /* CallKitViewController.swift */; };
+		8EFD544C2CDD4E1A001FA09A /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54452CDD4E1A001FA09A /* RoundedButtonView.swift */; };
+		8EFD544D2CDD4E1A001FA09A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54462CDD4E1A001FA09A /* SceneDelegate.swift */; };
+		8EFD544E2CDD4E1A001FA09A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54472CDD4E1A001FA09A /* UIColor.swift */; };
+		8EFD544F2CDD4E1A001FA09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD543D2CDD4E1A001FA09A /* Assets.xcassets */; };
+		8EFD54512CDD4E1A001FA09A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD54422CDD4E1A001FA09A /* LaunchScreen.storyboard */; };
+		8EFD54522CDD4E1A001FA09A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD54442CDD4E1A001FA09A /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8E7A47AC2CDAB251005C5115 /* call-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "call-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8EFD543D2CDD4E1A001FA09A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EFD543E2CDD4E1A001FA09A /* ButtonCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCallViewController.swift; sourceTree = "<group>"; };
+		8EFD543F2CDD4E1A001FA09A /* CallKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitViewController.swift; sourceTree = "<group>"; };
+		8EFD54402CDD4E1A001FA09A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EFD54412CDD4E1A001FA09A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EFD54432CDD4E1A001FA09A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EFD54452CDD4E1A001FA09A /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
+		8EFD54462CDD4E1A001FA09A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8EFD54472CDD4E1A001FA09A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		8E7A47BE2CDAB252005C5115 /* Exceptions for "call-screen-sample" folder in "call-screen-sample" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 8E7A47AB2CDAB251005C5115 /* call-screen-sample */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		8E7A47AE2CDAB251005C5115 /* call-screen-sample */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				8E7A47BE2CDAB252005C5115 /* Exceptions for "call-screen-sample" folder in "call-screen-sample" target */,
-			);
-			path = "call-screen-sample";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8E7A47A92CDAB251005C5115 /* Frameworks */ = {
@@ -45,7 +46,7 @@
 		8E7A47A32CDAB251005C5115 = {
 			isa = PBXGroup;
 			children = (
-				8E7A47AE2CDAB251005C5115 /* call-screen-sample */,
+				8EFD54482CDD4E1A001FA09A /* call-screen-sample */,
 				8E7A47AD2CDAB251005C5115 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +57,63 @@
 				8E7A47AC2CDAB251005C5115 /* call-screen-sample.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8EFD54482CDD4E1A001FA09A /* call-screen-sample */ = {
+			isa = PBXGroup;
+			children = (
+				8EFD54532CDD4E2A001FA09A /* Delegates */,
+				8EFD54552CDD4E66001FA09A /* Coordinators */,
+				8EFD54542CDD4E5D001FA09A /* ViewControllers */,
+				8EFD54562CDD4E6F001FA09A /* Views */,
+				8EFD54572CDD4EC7001FA09A /* Extension */,
+				8EFD543D2CDD4E1A001FA09A /* Assets.xcassets */,
+				8EFD54402CDD4E1A001FA09A /* Info.plist */,
+				8EFD54422CDD4E1A001FA09A /* LaunchScreen.storyboard */,
+				8EFD54442CDD4E1A001FA09A /* Main.storyboard */,
+			);
+			path = "call-screen-sample";
+			sourceTree = "<group>";
+		};
+		8EFD54532CDD4E2A001FA09A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8EFD54462CDD4E1A001FA09A /* SceneDelegate.swift */,
+				8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		8EFD54542CDD4E5D001FA09A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EFD543E2CDD4E1A001FA09A /* ButtonCallViewController.swift */,
+				8EFD543F2CDD4E1A001FA09A /* CallKitViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8EFD54552CDD4E66001FA09A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		8EFD54562CDD4E6F001FA09A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EFD54452CDD4E1A001FA09A /* RoundedButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8EFD54572CDD4EC7001FA09A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8EFD54472CDD4E1A001FA09A /* UIColor.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +130,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				8E7A47AE2CDAB251005C5115 /* call-screen-sample */,
 			);
 			name = "call-screen-sample";
 			packageProductDependencies = (
@@ -122,6 +177,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFD544F2CDD4E1A001FA09A /* Assets.xcassets in Resources */,
+				8EFD54512CDD4E1A001FA09A /* LaunchScreen.storyboard in Resources */,
+				8EFD54522CDD4E1A001FA09A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +190,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFD54492CDD4E1A001FA09A /* AppDelegate.swift in Sources */,
+				8EFD544A2CDD4E1A001FA09A /* ButtonCallViewController.swift in Sources */,
+				8EFD544B2CDD4E1A001FA09A /* CallKitViewController.swift in Sources */,
+				8EFD544C2CDD4E1A001FA09A /* RoundedButtonView.swift in Sources */,
+				8EFD544D2CDD4E1A001FA09A /* SceneDelegate.swift in Sources */,
+				8EFD544E2CDD4E1A001FA09A /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8EFD54422CDD4E1A001FA09A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EFD54412CDD4E1A001FA09A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8EFD54442CDD4E1A001FA09A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EFD54432CDD4E1A001FA09A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8E7A47C02CDAB252005C5115 /* Debug */ = {
@@ -148,7 +231,6 @@
 				DEVELOPMENT_TEAM = M4YMDNRFZP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "call-screen-sample/Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -182,7 +264,6 @@
 				DEVELOPMENT_TEAM = M4YMDNRFZP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "call-screen-sample/Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
