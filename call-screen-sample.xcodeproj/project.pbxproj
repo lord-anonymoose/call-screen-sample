@@ -16,6 +16,7 @@
 		8EFD544F2CDD4E1A001FA09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD543D2CDD4E1A001FA09A /* Assets.xcassets */; };
 		8EFD54512CDD4E1A001FA09A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD54422CDD4E1A001FA09A /* LaunchScreen.storyboard */; };
 		8EFD54522CDD4E1A001FA09A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD54442CDD4E1A001FA09A /* Main.storyboard */; };
+		8EFD54592CDD6804001FA09A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54582CDD6804001FA09A /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8EFD54452CDD4E1A001FA09A /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
 		8EFD54462CDD4E1A001FA09A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8EFD54472CDD4E1A001FA09A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8EFD54582CDD6804001FA09A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8EFD54472CDD4E1A001FA09A /* UIColor.swift */,
+				8EFD54582CDD6804001FA09A /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				8EFD544C2CDD4E1A001FA09A /* RoundedButtonView.swift in Sources */,
 				8EFD544D2CDD4E1A001FA09A /* SceneDelegate.swift in Sources */,
 				8EFD544E2CDD4E1A001FA09A /* UIColor.swift in Sources */,
+				8EFD54592CDD6804001FA09A /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

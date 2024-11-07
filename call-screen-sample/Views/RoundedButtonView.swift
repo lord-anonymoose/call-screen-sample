@@ -62,10 +62,14 @@ final class RoundedButtonView: UIButton {
     private func configureButton() {
         setImage(image, for: .normal)
         tintColor = imageColor
-        backgroundColor = buttonColor
+
+        let backgroundImage = UIImage.from(color: buttonColor)
+        setBackgroundImage(backgroundImage, for: .normal)
         layer.cornerRadius = height / 2
 
         translatesAutoresizingMaskIntoConstraints = false
+        clipsToBounds = true
+        contentMode = .scaleAspectFill
 
         NSLayoutConstraint.activate([
             widthAnchor.constraint(equalToConstant: height),
