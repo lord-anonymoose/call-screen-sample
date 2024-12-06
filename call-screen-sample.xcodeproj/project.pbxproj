@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E251B352D03A5EF003F4F45 /* CallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */; };
 		8EFD54492CDD4E1A001FA09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */; };
 		8EFD544A2CDD4E1A001FA09A /* ButtonCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543E2CDD4E1A001FA09A /* ButtonCallViewController.swift */; };
 		8EFD544B2CDD4E1A001FA09A /* CallKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543F2CDD4E1A001FA09A /* CallKitViewController.swift */; };
@@ -17,9 +18,11 @@
 		8EFD54512CDD4E1A001FA09A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD54422CDD4E1A001FA09A /* LaunchScreen.storyboard */; };
 		8EFD54522CDD4E1A001FA09A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD54442CDD4E1A001FA09A /* Main.storyboard */; };
 		8EFD54592CDD6804001FA09A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54582CDD6804001FA09A /* UIImage.swift */; };
+		8EFD545B2CDD719A001FA09A /* Marimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD545A2CDD719A001FA09A /* Marimba.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCoordinator.swift; sourceTree = "<group>"; };
 		8E7A47AC2CDAB251005C5115 /* call-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "call-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EFD543D2CDD4E1A001FA09A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		8EFD54462CDD4E1A001FA09A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8EFD54472CDD4E1A001FA09A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8EFD54582CDD6804001FA09A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		8EFD545A2CDD719A001FA09A /* Marimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marimba.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 				8EFD54402CDD4E1A001FA09A /* Info.plist */,
 				8EFD54422CDD4E1A001FA09A /* LaunchScreen.storyboard */,
 				8EFD54442CDD4E1A001FA09A /* Main.storyboard */,
+				8EFD545A2CDD719A001FA09A /* Marimba.mp3 */,
 			);
 			path = "call-screen-sample";
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8EFD543E2CDD4E1A001FA09A /* ButtonCallViewController.swift */,
+				8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */,
 				8EFD543F2CDD4E1A001FA09A /* CallKitViewController.swift */,
 			);
 			path = ViewControllers;
@@ -182,6 +188,7 @@
 			files = (
 				8EFD544F2CDD4E1A001FA09A /* Assets.xcassets in Resources */,
 				8EFD54512CDD4E1A001FA09A /* LaunchScreen.storyboard in Resources */,
+				8EFD545B2CDD719A001FA09A /* Marimba.mp3 in Resources */,
 				8EFD54522CDD4E1A001FA09A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +206,7 @@
 				8EFD544C2CDD4E1A001FA09A /* RoundedButtonView.swift in Sources */,
 				8EFD544D2CDD4E1A001FA09A /* SceneDelegate.swift in Sources */,
 				8EFD544E2CDD4E1A001FA09A /* UIColor.swift in Sources */,
+				8E251B352D03A5EF003F4F45 /* CallCoordinator.swift in Sources */,
 				8EFD54592CDD6804001FA09A /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
