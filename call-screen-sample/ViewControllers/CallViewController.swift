@@ -33,6 +33,8 @@ class CallViewController: UIViewController {
     
     
     // MARK: Subviews
+    
+    // A view for hiding Incoming Call interface for countdown delay
     private lazy var hideView: UIView = {
         let view = UIView()
         view.backgroundColor = .black
@@ -47,6 +49,16 @@ class CallViewController: UIViewController {
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    private lazy var contactLabel: UILabel = {
+        let label = UILabel()
+        label.text = viewModel.name
+        label.textColor = viewModel.image.averageColor(alpha: 1.0).getContrastText()
+        label.font = UIFont.systemFont(ofSize: 50, weight: .bold)
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     private lazy var declineButton: RoundedButtonView = {
@@ -106,6 +118,7 @@ class CallViewController: UIViewController {
     
     private func addSubviews() {
         view.addSubview(hideView)
+        view.addSubview(contactLabel)
         view.addSubview(backgroundImageView)
         view.sendSubviewToBack(backgroundImageView)
         
@@ -122,6 +135,10 @@ class CallViewController: UIViewController {
             hideView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             hideView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             hideView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            contactLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            contactLabel.heightAnchor.constraint(equalToConstant: 100),
+            contactLabel.centerXAnchor.constraint(equalTo: safeAreaGuide.centerXAnchor),
             
             backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -149,6 +166,7 @@ class CallViewController: UIViewController {
     private func showCall() {
         playRingtone()
         hideView.isHidden = true
+        contactLabel.isHidden = false
         backgroundImageView.isHidden = false
         declineButton.isHidden = false
         acceptButton.isHidden = false
@@ -159,6 +177,7 @@ class CallViewController: UIViewController {
         stopRingtone()
         self.hideStatusBar = true
         hideView.isHidden = false
+        self.contactLabel.isHidden = true
         backgroundImageView.isHidden = true
         declineButton.isHidden = true
         acceptButton.isHidden = true
