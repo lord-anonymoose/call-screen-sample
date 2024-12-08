@@ -8,12 +8,13 @@
 import UIKit
 import AVFoundation
 
-class ButtonCallViewController: UIViewController {
+class CallViewController: UIViewController {
 
     
     
     // MARK: Properties
-    var player: AVAudioPlayer?
+    private var viewModel: CallViewModel
+    private var player: AVAudioPlayer?
 
     var hideStatusBar: Bool = false {
         didSet {
@@ -40,7 +41,7 @@ class ButtonCallViewController: UIViewController {
     }()
     
     private lazy var backgroundImageView: UIImageView = {
-        let image = UIImage(named: "userImage") ?? UIImage(systemName: "pencil")
+        let image = viewModel.image
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -69,6 +70,15 @@ class ButtonCallViewController: UIViewController {
     
     
     // MARK: Lifecycle
+    init(viewModel: CallViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

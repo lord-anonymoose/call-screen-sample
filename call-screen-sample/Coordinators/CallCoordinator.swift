@@ -45,7 +45,8 @@ final class CallCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = ButtonCallViewController()
-        self.navigationController.pushViewController(vc, animated: true)
+        let viewModel = CallViewModel(coordinator: self, name: "Name", image: UIImage(named: "userImage")!)
+        let viewController = CallViewController(viewModel: viewModel)
+        self.navigationController.pushViewController(viewController, animated: true)
     }
 }

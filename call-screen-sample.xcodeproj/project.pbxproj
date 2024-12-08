@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E14A7182D0636B10018AC53 /* CallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E14A7172D0636B10018AC53 /* CallViewModel.swift */; };
 		8E251B352D03A5EF003F4F45 /* CallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */; };
 		8EFD54492CDD4E1A001FA09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */; };
-		8EFD544A2CDD4E1A001FA09A /* ButtonCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543E2CDD4E1A001FA09A /* ButtonCallViewController.swift */; };
-		8EFD544B2CDD4E1A001FA09A /* CallKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543F2CDD4E1A001FA09A /* CallKitViewController.swift */; };
+		8EFD544A2CDD4E1A001FA09A /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543E2CDD4E1A001FA09A /* CallViewController.swift */; };
 		8EFD544C2CDD4E1A001FA09A /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54452CDD4E1A001FA09A /* RoundedButtonView.swift */; };
 		8EFD544D2CDD4E1A001FA09A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54462CDD4E1A001FA09A /* SceneDelegate.swift */; };
 		8EFD544E2CDD4E1A001FA09A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54472CDD4E1A001FA09A /* UIColor.swift */; };
@@ -22,12 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E14A7172D0636B10018AC53 /* CallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewModel.swift; sourceTree = "<group>"; };
 		8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCoordinator.swift; sourceTree = "<group>"; };
 		8E7A47AC2CDAB251005C5115 /* call-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "call-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EFD543D2CDD4E1A001FA09A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8EFD543E2CDD4E1A001FA09A /* ButtonCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCallViewController.swift; sourceTree = "<group>"; };
-		8EFD543F2CDD4E1A001FA09A /* CallKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitViewController.swift; sourceTree = "<group>"; };
+		8EFD543E2CDD4E1A001FA09A /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		8EFD54402CDD4E1A001FA09A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFD54412CDD4E1A001FA09A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EFD54432CDD4E1A001FA09A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E14A7162D0636400018AC53 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E14A7172D0636B10018AC53 /* CallViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		8E7A47A32CDAB251005C5115 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +78,7 @@
 			children = (
 				8EFD54532CDD4E2A001FA09A /* Delegates */,
 				8EFD54552CDD4E66001FA09A /* Coordinators */,
+				8E14A7162D0636400018AC53 /* ViewModels */,
 				8EFD54542CDD4E5D001FA09A /* ViewControllers */,
 				8EFD54562CDD4E6F001FA09A /* Views */,
 				8EFD54572CDD4EC7001FA09A /* Extension */,
@@ -94,9 +103,7 @@
 		8EFD54542CDD4E5D001FA09A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8EFD543E2CDD4E1A001FA09A /* ButtonCallViewController.swift */,
-				8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */,
-				8EFD543F2CDD4E1A001FA09A /* CallKitViewController.swift */,
+				8EFD543E2CDD4E1A001FA09A /* CallViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 		8EFD54552CDD4E66001FA09A /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -201,12 +209,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFD54492CDD4E1A001FA09A /* AppDelegate.swift in Sources */,
-				8EFD544A2CDD4E1A001FA09A /* ButtonCallViewController.swift in Sources */,
-				8EFD544B2CDD4E1A001FA09A /* CallKitViewController.swift in Sources */,
+				8EFD544A2CDD4E1A001FA09A /* CallViewController.swift in Sources */,
 				8EFD544C2CDD4E1A001FA09A /* RoundedButtonView.swift in Sources */,
 				8EFD544D2CDD4E1A001FA09A /* SceneDelegate.swift in Sources */,
 				8EFD544E2CDD4E1A001FA09A /* UIColor.swift in Sources */,
 				8E251B352D03A5EF003F4F45 /* CallCoordinator.swift in Sources */,
+				8E14A7182D0636B10018AC53 /* CallViewModel.swift in Sources */,
 				8EFD54592CDD6804001FA09A /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
