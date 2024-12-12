@@ -41,7 +41,7 @@ extension UIColor {
         self.init(red: r, green: g, blue: b, alpha: a)
     }
     
-    func getContrastText() -> UIColor {
+    func contrastColor() -> UIColor {
         var r, g, b, a: CGFloat
         (r, g, b, a) = (0, 0, 0, 0)
         self.getRed(&r, green: &g, blue: &b, alpha: &a)

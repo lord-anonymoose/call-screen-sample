@@ -42,6 +42,12 @@ class CallViewController: UIViewController {
         return view
     }()
     
+    private lazy var callTopBarView: CallTopBarView = {
+        let view = CallTopBarView()
+        view.isHidden = true
+        return view
+    }()
+    
     private lazy var backgroundImageView: UIImageView = {
         let image = viewModel.image
         let imageView = UIImageView(image: image)
@@ -54,7 +60,7 @@ class CallViewController: UIViewController {
     private lazy var contactLabel: UILabel = {
         let label = UILabel()
         label.text = viewModel.name
-        label.textColor = viewModel.image.averageColor(alpha: 1.0).getContrastText()
+        label.textColor = viewModel.image.averageColor(alpha: 1.0).contrastColor()
         label.font = UIFont.systemFont(ofSize: 50, weight: .bold)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +71,9 @@ class CallViewController: UIViewController {
         let configuration = UIImage.SymbolConfiguration(pointSize: 32, weight: .bold)
         let image = UIImage(systemName: "phone.down.fill")!.withConfiguration(configuration)
         let color = UIColor(hex: "EB5545")!
-        let button = RoundedButtonView(title: "Decline", image: image, imageColor: .white, buttonColor: color, action: { print("No cry")})
+        let button = RoundedButtonView(title: "Decline", image: image, imageColor: .white, buttonColor: color, action: {
+            self.callDeclined()
+        })
         return button
     }()
     
@@ -73,10 +81,19 @@ class CallViewController: UIViewController {
         let configuration = UIImage.SymbolConfiguration(pointSize: 32, weight: .bold)
         let image = UIImage(systemName: "phone.fill")!.withConfiguration(configuration)
         let color = UIColor(hex: "67CE67")!
-        let button = RoundedButtonView(title: "Accept", image: image, imageColor: .white, buttonColor: color, action: { let vc = UIViewController()
-            self.navigationController?.pushViewController(vc, animated: false)
+        let button = RoundedButtonView(title: "Accept", image: image, imageColor: .white, buttonColor: color, action: {
+            self.callAccepted()
         })
         return button
+    }()
+    
+    private lazy var callActionBoxView: CallActionBoxView = {
+        let view = CallActionBoxView()
+        view.isHidden = true
+        view.endButton.setupAction {
+            self.callDeclined()
+        }
+        return view
     }()
 
     
@@ -114,27 +131,35 @@ class CallViewController: UIViewController {
     
     // MARK: Private
     private func setupUI() {
+        view.backgroundColor = .black
     }
     
     private func addSubviews() {
         view.addSubview(hideView)
+        view.addSubview(callTopBarView)
         view.addSubview(contactLabel)
         view.addSubview(backgroundImageView)
         view.sendSubviewToBack(backgroundImageView)
-        
         view.addSubview(declineButton)
         view.addSubview(acceptButton)
+        view.addSubview(callActionBoxView)
     }
     
     private func setupConstraints() {
         
         let safeAreaGuide = view.safeAreaLayoutGuide
+        let buttonSpacing = (view.frame.width - (74*3))/4
         
         NSLayoutConstraint.activate([
             hideView.topAnchor.constraint(equalTo: view.topAnchor),
             hideView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             hideView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             hideView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            callTopBarView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            callTopBarView.heightAnchor.constraint(equalToConstant: 50),
+            callTopBarView.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 25),
+            callTopBarView.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -25),
             
             contactLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             contactLabel.heightAnchor.constraint(equalToConstant: 100),
@@ -146,11 +171,16 @@ class CallViewController: UIViewController {
             backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             backgroundImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            declineButton.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: -74),
-            declineButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 37),
+            declineButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(buttonSpacing + 25)),
+            declineButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: buttonSpacing),
             
             acceptButton.bottomAnchor.constraint(equalTo: declineButton.bottomAnchor),
-            acceptButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -37)
+            acceptButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -buttonSpacing),
+            
+            callActionBoxView.bottomAnchor.constraint(equalTo: declineButton.bottomAnchor),
+            callActionBoxView.heightAnchor.constraint(equalToConstant: buttonSpacing + 74 + 74),
+            callActionBoxView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: buttonSpacing),
+            callActionBoxView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -buttonSpacing)
         ])
     }
     
@@ -176,12 +206,26 @@ class CallViewController: UIViewController {
     private func hideCall() {
         stopRingtone()
         self.hideStatusBar = true
-        hideView.isHidden = false
-        self.contactLabel.isHidden = true
-        backgroundImageView.isHidden = true
+        for view in self.view.subviews {
+            view.isHidden = true
+        }
+    }
+    
+    private func callAccepted() {
+        stopRingtone()
         declineButton.isHidden = true
         acceptButton.isHidden = true
-        self.hideStatusBar = true
+        callTopBarView.isHidden = false
+        callActionBoxView.isHidden = false
+    }
+    
+    private func callDeclined() {
+        self.backgroundImageView.alpha = 0.5
+        self.acceptButton.alpha = 0.5
+        self.declineButton.alpha = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.hideCall()
+        }
     }
     
     private func playRingtone() {

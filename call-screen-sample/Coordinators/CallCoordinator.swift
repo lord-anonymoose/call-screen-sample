@@ -49,4 +49,13 @@ final class CallCoordinator: Coordinator {
         let viewController = CallViewController(viewModel: viewModel)
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func accepCall() {
+        let viewModel = CallViewModel(coordinator: self, name: "Name", image: UIImage(named: "userImage")!)
+        //let viewController = CallViewController(viewModel: <#T##CallViewModel#>)
+    }
+    
+    func rejectCall() {
+        
+    }
 }

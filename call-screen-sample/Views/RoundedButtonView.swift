@@ -70,7 +70,6 @@ final class RoundedButtonView: UIView {
     
     // MARK: - Actions
     @objc private func buttonTapped() {
-        print("Hello, world!")
         action?()  // Вызываем действие, если оно установлено
     }
     
@@ -125,5 +124,9 @@ final class RoundedButtonView: UIView {
             label.heightAnchor.constraint(equalToConstant: 16),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
+    }
+    
+    func setupAction(_ newAction: @escaping Action) {
+        self.action = newAction
     }
 }

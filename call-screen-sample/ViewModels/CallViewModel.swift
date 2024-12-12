@@ -24,4 +24,8 @@ final class CallViewModel {
     func goToCall() {
         coordinator?.start()
     }
+    
+    func acceptCall() {
+        
+    }
 }

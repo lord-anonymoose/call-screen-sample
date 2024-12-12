@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8E14A7182D0636B10018AC53 /* CallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E14A7172D0636B10018AC53 /* CallViewModel.swift */; };
 		8E251B352D03A5EF003F4F45 /* CallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */; };
+		8EBF757C2D0B89F000EF7F00 /* CallTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF757B2D0B89F000EF7F00 /* CallTopBarView.swift */; };
+		8EBF757E2D0B8A0E00EF7F00 /* CallActionBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF757D2D0B8A0E00EF7F00 /* CallActionBoxView.swift */; };
+		8EBF75802D0B8C2800EF7F00 /* UISymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF757F2D0B8C2800EF7F00 /* UISymbolButton.swift */; };
 		8EFD54492CDD4E1A001FA09A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */; };
 		8EFD544A2CDD4E1A001FA09A /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD543E2CDD4E1A001FA09A /* CallViewController.swift */; };
 		8EFD544C2CDD4E1A001FA09A /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD54452CDD4E1A001FA09A /* RoundedButtonView.swift */; };
@@ -25,6 +28,9 @@
 		8E14A7172D0636B10018AC53 /* CallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewModel.swift; sourceTree = "<group>"; };
 		8E251B342D03A5EF003F4F45 /* CallCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCoordinator.swift; sourceTree = "<group>"; };
 		8E7A47AC2CDAB251005C5115 /* call-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "call-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EBF757B2D0B89F000EF7F00 /* CallTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallTopBarView.swift; sourceTree = "<group>"; };
+		8EBF757D2D0B8A0E00EF7F00 /* CallActionBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallActionBoxView.swift; sourceTree = "<group>"; };
+		8EBF757F2D0B8C2800EF7F00 /* UISymbolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISymbolButton.swift; sourceTree = "<group>"; };
 		8EFD543C2CDD4E1A001FA09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EFD543D2CDD4E1A001FA09A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EFD543E2CDD4E1A001FA09A /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				8EFD54452CDD4E1A001FA09A /* RoundedButtonView.swift */,
+				8EBF757B2D0B89F000EF7F00 /* CallTopBarView.swift */,
+				8EBF757D2D0B8A0E00EF7F00 /* CallActionBoxView.swift */,
+				8EBF757F2D0B8C2800EF7F00 /* UISymbolButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,11 +219,14 @@
 			files = (
 				8EFD54492CDD4E1A001FA09A /* AppDelegate.swift in Sources */,
 				8EFD544A2CDD4E1A001FA09A /* CallViewController.swift in Sources */,
+				8EBF757E2D0B8A0E00EF7F00 /* CallActionBoxView.swift in Sources */,
+				8EBF75802D0B8C2800EF7F00 /* UISymbolButton.swift in Sources */,
 				8EFD544C2CDD4E1A001FA09A /* RoundedButtonView.swift in Sources */,
 				8EFD544D2CDD4E1A001FA09A /* SceneDelegate.swift in Sources */,
 				8EFD544E2CDD4E1A001FA09A /* UIColor.swift in Sources */,
 				8E251B352D03A5EF003F4F45 /* CallCoordinator.swift in Sources */,
 				8E14A7182D0636B10018AC53 /* CallViewModel.swift in Sources */,
+				8EBF757C2D0B89F000EF7F00 /* CallTopBarView.swift in Sources */,
 				8EFD54592CDD6804001FA09A /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
