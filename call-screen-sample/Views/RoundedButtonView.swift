@@ -25,6 +25,8 @@ final class RoundedButtonView: UIView {
     
     var height: CGFloat = 74
     
+    var isPushed: Bool = false
+    
     
     
     // MARK: - Subviews
@@ -128,5 +130,18 @@ final class RoundedButtonView: UIView {
     
     func setupAction(_ newAction: @escaping Action) {
         self.action = newAction
+    }
+    
+    func togglePushUI(imageTintColor: UIColor) {
+        if isPushed {
+            button.tintColor = imageColor
+            let backgroundImage = UIImage.from(color: buttonColor)
+            button.setBackgroundImage(backgroundImage, for: .normal)
+        } else {
+            button.tintColor = imageTintColor
+            let backgroundImage = UIImage.from(color: .white)
+            button.setBackgroundImage(backgroundImage, for: .normal)
+        }
+        isPushed.toggle()
     }
 }

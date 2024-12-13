@@ -11,12 +11,13 @@ final class CallActionBoxView: UIView {
     
     let buttonColor = UIColor.systemGray.withAlphaComponent(0.5)
         
-    private lazy var audioButton: RoundedButtonView = {
+    lazy var audioButton: RoundedButtonView = {
         let configuration = UIImage.SymbolConfiguration(pointSize: 27, weight: .bold)
         let image = UIImage(systemName: "speaker.wave.2.fill")!.withConfiguration(configuration)
-        let button = RoundedButtonView(title: "Audio", image: image, imageColor: .white, buttonColor: buttonColor, action: {
-            print("audioButton Tapped")
-        })
+        let button = RoundedButtonView(title: "Audio", image: image, imageColor: .white, buttonColor: buttonColor, action: {})
+        button.setupAction {
+            button.togglePushUI(imageTintColor: .black)
+        }
         return button
     }()
     
@@ -29,12 +30,13 @@ final class CallActionBoxView: UIView {
         return button
     }()
     
-    private lazy var muteButton: RoundedButtonView = {
+    lazy var muteButton: RoundedButtonView = {
         let configuration = UIImage.SymbolConfiguration(pointSize: 27, weight: .bold)
         let image = UIImage(systemName: "mic.slash.fill")!.withConfiguration(configuration)
-        let button = RoundedButtonView(title: "Mute", image: image, imageColor: .white, buttonColor: buttonColor, action: {
-            print("muteButton Tapped")
-        })
+        let button = RoundedButtonView(title: "Mute", image: image, imageColor: .white, buttonColor: buttonColor, action: {})
+        button.setupAction {
+            button.togglePushUI(imageTintColor: .red)
+        }
         return button
     }()
     

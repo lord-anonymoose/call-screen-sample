@@ -220,6 +220,15 @@ class CallViewController: UIViewController {
     }
     
     private func callDeclined() {
+        if callActionBoxView.audioButton.isPushed {
+            callActionBoxView.audioButton.togglePushUI(imageTintColor: .black)
+            callActionBoxView.audioButton.isPushed.toggle()
+        }
+        
+        if callActionBoxView.muteButton.isPushed {
+            callActionBoxView.muteButton.togglePushUI(imageTintColor: .red)
+            callActionBoxView.muteButton.isPushed.toggle()
+        }
         self.backgroundImageView.alpha = 0.5
         self.acceptButton.alpha = 0.5
         self.declineButton.alpha = 0.5
@@ -233,8 +242,8 @@ class CallViewController: UIViewController {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
             try AVAudioSession.sharedInstance().setActive(true)
-            self.player = try AVAudioPlayer(contentsOf: url)  // Используем свойство класса player
-            player?.play()  // Воспроизводим звук
+            self.player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
         } catch let error {
             print(error.localizedDescription)
         }
